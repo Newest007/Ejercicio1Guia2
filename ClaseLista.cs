@@ -9,6 +9,7 @@ namespace Ejercicio1Guía2
 
         public ListaNodo primerNodo;
         public ListaNodo ultimoNodo;
+        int tamañoLista = 0;
 
         //Constructor por defecto
         public ClaseLista()
@@ -85,6 +86,12 @@ namespace Ejercicio1Guía2
             {
                 ListaNodo Puntero;
                 Puntero = primerNodo;
+
+                if (posicion > tamañoLista)
+                {
+                    Console.WriteLine("Posición fuera de los rangos de la lista!, el dígito se colocara al final de la lista");
+                }
+
                 if (posicion == 1) //Si la posición es 1 se inserta en la cabecera
                 {
                     primerNodo = auxiliar;
@@ -120,6 +127,7 @@ namespace Ejercicio1Guía2
             if (EstaVacia())
             {
                 Console.WriteLine("La lista esta vacía, no se puede eliminar el elemento");
+                Console.WriteLine("");
             }
             else
             {
@@ -133,7 +141,7 @@ namespace Ejercicio1Guía2
         {
             if(EstaVacia())
             {
-                Console.WriteLine("La lista esta vacía, no se puede eliminar el dato");
+                Console.WriteLine("La lista esta vacía, no se puede eliminar el dato!");
                 Console.WriteLine("");
             }
 
@@ -170,9 +178,10 @@ namespace Ejercicio1Guía2
             {
                 Console.WriteLine("\n" + actual.Datos + "");
                 actual = actual.Siguiente;
+                tamañoLista = tamañoLista + 1;
             }
             Console.WriteLine("\n");
-
+            // Console.WriteLine("El tamaño de la lista es:" + tamañoLista);
         }
         //=========================================================================================//
 

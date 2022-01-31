@@ -26,6 +26,7 @@ namespace Ejercicio1Guía2
                 Console.WriteLine("5. Eliminar al Frente");
                 Console.WriteLine("6. Mostrar datos");
                 Console.WriteLine("7. Salir");
+                Console.WriteLine("8. Insertar en forma ascendente");
                 Console.WriteLine("");
                 option = int.Parse(Console.ReadLine());
                 
