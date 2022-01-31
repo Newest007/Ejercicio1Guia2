@@ -8,11 +8,11 @@ namespace Ejercicio1Guía2
         {
             ClaseLista listaPrincipal = new ClaseLista();
 
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.Clear();
             Console.Title = "Ejercicio 1 Guía 2";
             int option;
-            int valor;
+            int valor, posicion;
             string siono;
             do
             {
@@ -26,8 +26,9 @@ namespace Ejercicio1Guía2
                 Console.WriteLine("5. Eliminar al Frente");
                 Console.WriteLine("6. Mostrar datos");
                 Console.WriteLine("7. Salir");
-                option = int.Parse(Console.ReadLine());
                 Console.WriteLine("");
+                option = int.Parse(Console.ReadLine());
+                
 
                 switch (option)
                 {
@@ -52,7 +53,10 @@ namespace Ejercicio1Guía2
                         {
                             Console.WriteLine("");
                             Console.WriteLine("Ingrese el dígito que desea agregar al arreglo");
-                            Console.ReadLine();
+                            valor = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Seleccione la posición en la que desea añadir el dígito");
+                            posicion = int.Parse(Console.ReadLine());
+                            listaPrincipal.InsertarPosición(valor, posicion);
                             break;
                         }
                     case 4:
@@ -96,8 +100,7 @@ namespace Ejercicio1Guía2
 
                 }
 
-                Console.WriteLine("Si desea añadir otro dígito presione cualquier tecla");
-                Console.WriteLine("Si desea salir de programa presione 'n' ");
+                Console.WriteLine("Si desea añadir otro dígito presione cualquier tecla y si desea salir del programa solo presione 'n'");
                 siono = Console.ReadLine();
                 Console.Clear();
 
