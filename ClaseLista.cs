@@ -131,6 +131,7 @@ namespace Ejercicio1Guía2
             }
             else
             {
+                tamañoLista = tamañoLista - 2;
                 primerNodo = primerNodo.Siguiente;
             }
         }
@@ -147,6 +148,7 @@ namespace Ejercicio1Guía2
 
             else
             {
+                tamañoLista = tamañoLista - 2;
                 ListaNodo actual, punteroAnterior;
                 punteroAnterior = primerNodo;
                 actual = primerNodo;
@@ -181,7 +183,7 @@ namespace Ejercicio1Guía2
                 tamañoLista = tamañoLista + 1;
             }
             Console.WriteLine("\n");
-            // Console.WriteLine("El tamaño de la lista es:" + tamañoLista);
+            Console.WriteLine("El tamaño de la lista es:" + tamañoLista);
         }
         //=========================================================================================//
 
