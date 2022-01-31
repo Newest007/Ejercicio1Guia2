@@ -60,7 +60,7 @@ namespace Ejercicio1Guía2
             ListaNodo actual = primerNodo; //Puntero para recorrer la lista
             while(actual != null) // Si el puntero es diferente de null
             {
-                Console.WriteLine(actual.Datos + "");
+                Console.WriteLine("\n" + actual.Datos + "");
                 actual = actual.Siguiente;
             }
             Console.WriteLine("\n");
