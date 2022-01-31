@@ -6,27 +6,28 @@ namespace Ejercicio1Guía2
     {
         static void Main(string[] args)
         {
+            ClaseLista listaPrincipal = new ClaseLista();
+
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Clear();
             Console.Title = "Ejercicio 1 Guía 2";
             int option;
-            int valor1, valor2, valor3, valor4;
+            int valor;
             string siono;
             do
             {
                 Console.WriteLine("==========================================");
                 Console.WriteLine(" Seleccione el método que desea aplicar");
                 Console.WriteLine("==========================================");
-                Console.WriteLine("1. Insertar al Frente");
-                Console.WriteLine("2. Insertar al Final");
+                Console.WriteLine("1. Insertar al Final");
+                Console.WriteLine("2. Insertar al Frente");
                 Console.WriteLine("3. Insertar en una posición en especifico");
                 Console.WriteLine("4. Eliminar al Frente");
                 Console.WriteLine("5. Eliminar al final");
                 Console.WriteLine("6. Mostrar datos");
                 Console.WriteLine("7. Salir");
+                Console.WriteLine("\n");
                 option = int.Parse(Console.ReadLine());
-
-
 
                 switch (option)
                 {
@@ -34,7 +35,8 @@ namespace Ejercicio1Guía2
                         {
                             Console.WriteLine("");
                             Console.WriteLine("Ingrese el digíto que desea agregar al arreglo");
-                            valor1 = int.Parse(Console.ReadLine());
+                            valor = int.Parse(Console.ReadLine());
+                            listaPrincipal.InsertarFinal(valor);
 
                             break;
                         }
@@ -69,7 +71,7 @@ namespace Ejercicio1Guía2
                     case 6:
                         {
                             Console.WriteLine("");
-                            Console.WriteLine("Ingrese el dígito que desea agregar al arreglo");
+                            listaPrincipal.ImprimirLista();
                             Console.ReadLine();
                             break;
                         }
@@ -89,8 +91,10 @@ namespace Ejercicio1Guía2
 
                 }
 
-                Console.WriteLine("Si desea añadir otro dígito presione 's', si desea salir presione 'n'");
+                Console.WriteLine("Si desea añadir otro dígito presione cualquier tecla");
+                Console.WriteLine("Si desea salir de programa presione 'n' ");
                 siono = Console.ReadLine();
+                Console.Clear();
 
             }
             while (siono != "n" && siono != "N");
