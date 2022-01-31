@@ -24,9 +24,7 @@ namespace Ejercicio1Guía2
 
         public ListaNodo()
         {
-
         }
-
 
         /*
         public ListaNodo(int valorDatos) : this(valorDatos, null) { }

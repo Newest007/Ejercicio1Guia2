@@ -22,12 +22,12 @@ namespace Ejercicio1Guía2
                 Console.WriteLine("1. Insertar al Final");
                 Console.WriteLine("2. Insertar al Frente");
                 Console.WriteLine("3. Insertar en una posición en especifico");
-                Console.WriteLine("4. Eliminar al Frente");
-                Console.WriteLine("5. Eliminar al final");
+                Console.WriteLine("4. Eliminar al Final");
+                Console.WriteLine("5. Eliminar al Frente");
                 Console.WriteLine("6. Mostrar datos");
                 Console.WriteLine("7. Salir");
-                Console.WriteLine("\n");
                 option = int.Parse(Console.ReadLine());
+                Console.WriteLine("");
 
                 switch (option)
                 {
@@ -58,15 +58,17 @@ namespace Ejercicio1Guía2
                     case 4:
                         {
                             Console.WriteLine("");
-                            Console.WriteLine("Ingrese el dígito que desea agregar al arreglo");
+                            Console.WriteLine("Eliminando el último dato..., presione cualquier tecla para continuar:");
                             Console.ReadLine();
+                            listaPrincipal.EliminarAtras();
                             break;
                         }
                     case 5:
                         {
                             Console.WriteLine("");
-                            Console.WriteLine("Ingrese el dígito que desea agregar al arreglo");
+                            Console.WriteLine("Eliminando el primmer dato..., presione cualquier tecla para continuar:");
                             Console.ReadLine();
+                            listaPrincipal.EliminarAdelante();
                             break;
                         }
                     case 6:
@@ -79,7 +81,7 @@ namespace Ejercicio1Guía2
                     case 7:
                         {
                             Console.WriteLine("\n");
-                            Console.WriteLine("Saliendo del programa");
+                            Console.WriteLine("Saliendo del programa...");
                             Console.ReadKey();
                             Environment.Exit(0);
                             break;
@@ -87,6 +89,8 @@ namespace Ejercicio1Guía2
 
                     default:
                         {
+                            Console.WriteLine("\n");
+                            Console.WriteLine("Opción no válida, seleccione otra opción");
                             break;
                         }
 

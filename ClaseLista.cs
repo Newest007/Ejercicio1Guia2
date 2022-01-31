@@ -47,7 +47,7 @@ namespace Ejercicio1Guía2
         }
         //============================================================//
 
-        //Método para ingresar un valor al principio, de tal manera que la cabecerá es la que cambiara
+        //Método para ingresar un valor al principio, de tal manera que la cabecerá cambie
         public void InsertalInicio(int digito)
         {
             ListaNodo auxiliar = new ListaNodo();
@@ -66,9 +66,59 @@ namespace Ejercicio1Guía2
                 auxiliar.Siguiente = puntero; //Lo que hace es modificar la cabecera de tal manera que el auxiliar se poné como
                                               //primer nodo: valor siguiente del auxiliar será el puntero
             }
+        }
+        //================================================================//
 
+        //Método para insertar en una posición en concreto de la lista
+        public void InsertarPosición(int digito, int posicion)
+        {
+            ListaNodo auxiliar = new ListaNodo();
+            auxiliar.Datos = digito;
+            auxiliar.Siguiente = null;
 
         }
+
+
+        //Método para eliminar un dato del frente
+        public void EliminarAdelante()
+        {
+            if (EstaVacia())
+            {
+                Console.WriteLine("La lista esta vacía, no se puede eliminar el elemento");
+            }
+            else
+            {
+                primerNodo = primerNodo.Siguiente;
+            }
+        }
+        //==========================================================================================//
+
+        //Método para eliminar un dato al final
+        public void EliminarAtras()
+        {
+            if(EstaVacia())
+            {
+                Console.WriteLine("La lista esta vacía, no se puede eliminar el dato");
+                Console.WriteLine("");
+            }
+
+            else
+            {
+                ListaNodo actual, punteroAnterior;
+                punteroAnterior = primerNodo;
+                actual = primerNodo;
+
+                while(actual.Siguiente != null)
+                {
+                    punteroAnterior = actual;
+                    actual = actual.Siguiente; //Avanza al siguiente nodo
+                }
+                punteroAnterior.Siguiente = null;
+            }
+        }
+        //==========================================================================================//
+
+
 
         //Método para imprimir la lista
         public void ImprimirLista()
