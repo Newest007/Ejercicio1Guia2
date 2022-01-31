@@ -44,7 +44,8 @@ namespace Ejercicio1Guía2
                         {
                             Console.WriteLine("");
                             Console.WriteLine("Ingrese el dígito que desea agregar al arreglo");
-                            Console.ReadLine();
+                            valor = int.Parse(Console.ReadLine());
+                            listaPrincipal.InsertalInicio(valor);
                             break;
                         }
                     case 3:

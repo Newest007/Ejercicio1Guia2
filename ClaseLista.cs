@@ -47,6 +47,29 @@ namespace Ejercicio1Guía2
         }
         //============================================================//
 
+        //Método para ingresar un valor al principio, de tal manera que la cabecerá es la que cambiara
+        public void InsertalInicio(int digito)
+        {
+            ListaNodo auxiliar = new ListaNodo();
+            auxiliar.Datos = digito;
+            auxiliar.Siguiente = null;
+
+            if(EstaVacia())
+            {
+                primerNodo = ultimoNodo = auxiliar;
+            }
+            else
+            {
+                ListaNodo puntero; //Usado para recorrer la lista
+                puntero = primerNodo;
+                primerNodo = auxiliar;
+                auxiliar.Siguiente = puntero; //Lo que hace es modificar la cabecera de tal manera que el auxiliar se poné como
+                                              //primer nodo: valor siguiente del auxiliar será el puntero
+            }
+
+
+        }
+
         //Método para imprimir la lista
         public void ImprimirLista()
         {
