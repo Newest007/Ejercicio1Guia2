@@ -32,6 +32,7 @@ namespace Ejercicio1Guía2
             if (EstaVacia())//Si la lista esta vacia:
             {
                 primerNodo = ultimoNodo = auxiliar;
+                tamañoLista = tamañoLista + 1;
             }
             else
             {
@@ -44,6 +45,7 @@ namespace Ejercicio1Guía2
                     puntero = puntero.Siguiente; //Ira recorriendo la lista de nodos hasta topar con null
                 }
                 puntero.Siguiente = auxiliar;
+                tamañoLista = tamañoLista + 1;
             }
         }
         //============================================================//
@@ -58,6 +60,7 @@ namespace Ejercicio1Guía2
             if(EstaVacia())
             {
                 primerNodo = ultimoNodo = auxiliar;
+                tamañoLista = tamañoLista + 1;
             }
             else
             {
@@ -65,7 +68,7 @@ namespace Ejercicio1Guía2
                 puntero = primerNodo;
                 primerNodo = auxiliar;
                 auxiliar.Siguiente = puntero; //Lo que hace es modificar la cabecera de tal manera que el auxiliar se poné como
-                                              //primer nodo: valor siguiente del auxiliar será el puntero
+                tamañoLista = tamañoLista + 1;//primer nodo: valor siguiente del auxiliar será el puntero
             }
         }
         //=======================================================================================//
@@ -79,8 +82,10 @@ namespace Ejercicio1Guía2
 
             if(EstaVacia()) //Si la lista esta vacía
             {
-                Console.WriteLine("La lista está vacía, el dato se ingresara en la 1° posición");
+                Console.WriteLine("\nLa lista está vacía, el dato se ingresara en la 1° posición");
+                Console.WriteLine("");
                 primerNodo = auxiliar;
+                tamañoLista = tamañoLista + 1;
             }
             else
             {
@@ -89,7 +94,8 @@ namespace Ejercicio1Guía2
 
                 if (posicion > tamañoLista)
                 {
-                    Console.WriteLine("Posición fuera de los rangos de la lista!, el dígito se colocara al final de la lista");
+                    Console.WriteLine("\nPosición fuera de los rangos de la lista!, el dígito se colocara al final de la lista");
+                    Console.WriteLine("\n");
                 }
 
                 if (posicion == 1) //Si la posición es 1 se inserta en la cabecera
@@ -104,7 +110,6 @@ namespace Ejercicio1Guía2
                         Puntero = Puntero.Siguiente;
                         if (Puntero.Siguiente == null) //Si se llega al final de la lista
                             break;
-
                     }
 
                     ListaNodo SiguientePuntero; //Puntero para ayudar
@@ -113,8 +118,10 @@ namespace Ejercicio1Guía2
                     auxiliar.Siguiente = SiguientePuntero; //El nodo recien ingresado señalara al apuntador "SiguientePuntero"
                     //De manera resumida lo que hace es cortar la lista por un momento para ingresar el nuevo nodo
                     //Y luego uné la lista junto con el nuevo nodo añadido
+                    
 
                 }
+                tamañoLista = tamañoLista + 1;
             }
 
 
@@ -128,11 +135,13 @@ namespace Ejercicio1Guía2
             {
                 Console.WriteLine("La lista esta vacía, no se puede eliminar el elemento");
                 Console.WriteLine("");
+               
             }
             else
             {
-                tamañoLista = tamañoLista - 2;
+                tamañoLista = tamañoLista - 1;
                 primerNodo = primerNodo.Siguiente;
+                
             }
         }
         //==========================================================================================//
@@ -148,7 +157,6 @@ namespace Ejercicio1Guía2
 
             else
             {
-                tamañoLista = tamañoLista - 2;
                 ListaNodo actual, punteroAnterior;
                 punteroAnterior = primerNodo;
                 actual = primerNodo;
@@ -157,8 +165,10 @@ namespace Ejercicio1Guía2
                 {
                     punteroAnterior = actual;
                     actual = actual.Siguiente; //Avanza al siguiente nodo
+                    
                 }
                 punteroAnterior.Siguiente = null;
+                tamañoLista = tamañoLista - 1;
             }
         }
         //==========================================================================================//
@@ -171,19 +181,20 @@ namespace Ejercicio1Guía2
             if(EstaVacia())
             {
                 Console.WriteLine("\n La lista es vacía!");
+                Console.WriteLine("");
                 return;
             }
 
             Console.WriteLine("\n Mostrando lista, espere...");
+            Console.WriteLine("");
             ListaNodo actual = primerNodo; //Puntero para recorrer la lista
             while(actual != null) // Si el puntero es diferente de null
             {
                 Console.WriteLine("\n" + actual.Datos + "");
                 actual = actual.Siguiente;
-                tamañoLista = tamañoLista + 1;
             }
             Console.WriteLine("\n");
-            Console.WriteLine("El tamaño de la lista es:" + tamañoLista);
+            //Console.WriteLine("El tamaño de la lista es:" + tamañoLista);
         }
         //=========================================================================================//
 

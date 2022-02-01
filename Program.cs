@@ -19,14 +19,14 @@ namespace Ejercicio1Guía2
                 Console.WriteLine("==========================================");
                 Console.WriteLine(" Seleccione el método que desea aplicar");
                 Console.WriteLine("==========================================");
-                Console.WriteLine("1. Insertar al Final");
-                Console.WriteLine("2. Insertar al Frente");
-                Console.WriteLine("3. Insertar en una posición en especifico");
-                Console.WriteLine("4. Eliminar al Final");
-                Console.WriteLine("5. Eliminar al Frente");
-                Console.WriteLine("6. Mostrar datos");
-                Console.WriteLine("7. Salir");
-                Console.WriteLine("8. Insertar en forma ascendente");
+                Console.WriteLine("  1. Insertar al Final");
+                Console.WriteLine("  2. Insertar al Frente");
+                Console.WriteLine("  3. Insertar en una posición en especifico");
+                Console.WriteLine("  4. Eliminar al Final");
+                Console.WriteLine("  5. Eliminar al Frente");
+                Console.WriteLine("  6. Mostrar datos");
+                Console.WriteLine("  7. Salir");
+                Console.WriteLine("  8. Insertar en forma ascendente");
                 Console.WriteLine("");
                 option = int.Parse(Console.ReadLine());
                 
@@ -39,6 +39,7 @@ namespace Ejercicio1Guía2
                             Console.WriteLine("Ingrese el digíto que desea agregar al arreglo");
                             valor = int.Parse(Console.ReadLine());
                             listaPrincipal.InsertarFinal(valor);
+                            
 
                             break;
                         }
